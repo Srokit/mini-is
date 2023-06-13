@@ -7,13 +7,28 @@
 
 #include <gtest/gtest.h>
 
-// extern "C" {
 #include "mini-is/memory.h"
-// }
 
-TEST(MemoryTest, MemoryInit) {
-    mis_memory_t* memory = mis_memory_create();
-    EXPECT_NE(memory, nullptr);
-    if (memory != nullptr)
-        mis_memory_destroy(memory);
+class MemoryTest : public ::testing::Test {
+ protected:
+  void SetUp() override {
+    memory_ = mis_memory_create();
+    ASSERT_NE(memory_, nullptr);
+  }
+
+  void TearDown() override {
+    mis_memory_destroy(memory_);
+  }
+  mis_memory_t* memory_;
+};
+
+TEST_F(MemoryTest, MemoryInit) {
+  EXPECT_NE(memory_, nullptr);
+}
+
+TEST_F(MemoryTest, MemoryGetRandom) {
+  mis_byte_t* byte_ptr = mis_memory_get(memory_, 5);
+
+  EXPECT_NE(byte_ptr, nullptr);
+  EXPECT_EQ(*byte_ptr, 0);
 }
