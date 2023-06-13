@@ -28,6 +28,11 @@ mis_system_t* mis_system_create(void);
 
 void mis_system_destroy(mis_system_t*);
 
+void mis_system_read_memory(mis_system_t*,
+                            int /* read_start_address */,
+                            int /* size */,
+                            char* /* dst_buffer */);
+
 #ifdef __cplusplus
 }  // extern "C"
 #endif

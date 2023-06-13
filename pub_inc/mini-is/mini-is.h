@@ -13,6 +13,9 @@
 #ifndef MINI_IS_H
 #define MINI_IS_H
 
+// Memory size in bytes
+#define MIS_MEMORY_SIZE 65536  // 2^16 B
+
 // Forward declare bc the system struct is private
 typedef struct mis_system_struct mis_system_t;
 
@@ -27,6 +30,11 @@ extern "C" {
 miniis_handle_t* miniis_init(void);
 
 void miniis_execute_instruction(miniis_handle_t*, const char*);
+
+void miniis_read_memory(miniis_handle_t*,
+                        int /* read_start_address */,
+                        int /* size */,
+                        char* /* dst_buffer */);
 
 void miniis_destroy(miniis_handle_t*);
 

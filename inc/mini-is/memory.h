@@ -14,9 +14,6 @@
 #ifndef MINI_IS_MEMORY_H
 #define MINI_IS_MEMORY_H
 
-// Memory size in bytes
-#define MIS_MEMORY_SIZE 65536  // 2^16 B
-
 typedef unsigned char mis_byte_t;
 
 typedef struct {
@@ -32,6 +29,11 @@ mis_memory_t* mis_memory_create(void);
 void mis_memory_destroy(mis_memory_t*);
 
 mis_byte_t* mis_memory_get(mis_memory_t*, int);
+
+void mis_memory_read(mis_memory_t*,
+                     int /* read_start_address */,
+                     int /* size */,
+                     char* /* dst_buffer */);
 
 #ifdef __cplusplus
 }  // extern "C"

@@ -32,3 +32,11 @@ TEST_F(MemoryTest, MemoryGetRandom) {
   EXPECT_NE(byte_ptr, nullptr);
   EXPECT_EQ(*byte_ptr, 0);
 }
+
+TEST_F(MemoryTest, MemoryRead) {
+  mis_byte_t* byte_ptr = mis_memory_get(memory_, 5);
+  *byte_ptr = 0x42;
+  char buffer[1];
+  mis_memory_read(memory_, 5, 1, buffer);
+  EXPECT_EQ(buffer[0], 0x42);
+}

@@ -20,3 +20,13 @@ void mis_system_destroy(mis_system_t* system) {
     mis_memory_destroy(system->memory_);
     free(system);
 }
+
+void mis_system_read_memory(mis_system_t* system,
+                            int read_start_address,
+                            int size,
+                            char* dst_buffer) {
+    mis_memory_read(system->memory_,
+                    read_start_address,
+                    size,
+                    dst_buffer);
+}

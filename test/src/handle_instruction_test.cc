@@ -9,6 +9,9 @@
 
 #include "mini-is/handle_instruction.h"
 
+// For MIS_MEMORY_SIZE
+#include "mini-is/mini-is.h"
+
 class HandleInstructionTest : public ::testing::Test {
  protected:
   void SetUp() override {

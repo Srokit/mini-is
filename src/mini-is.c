@@ -25,6 +25,16 @@ void miniis_execute_instruction(miniis_handle_t* handle, const char* ins_str) {
   mis_handle_instruction(handle->sys_, &ins);
 }
 
+void miniis_read_memory(miniis_handle_t* handle,
+                        int read_start_address,
+                        int size,
+                        char* dst_buffer) {
+  mis_system_read_memory(handle->sys_,
+                         read_start_address,
+                         size,
+                         dst_buffer);
+}
+
 void miniis_destroy(miniis_handle_t* handle) {
   mis_system_destroy(handle->sys_);
   free(handle);
