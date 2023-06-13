@@ -10,6 +10,7 @@ cmake_minimum_required(VERSION 3.15)
 project(MiniIS C CXX)
 
 set(CMAKE_C_STANDARD 11)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 file(GLOB SOURCES "src/*.c")
 add_library(mini-is SHARED ${SOURCES})
