@@ -1,7 +1,7 @@
 ##
 # Project: Mini-is
 # File: CMakeLists.txt
-# Author:  Stanley Rokita <stan@stansa.dev>
+# Author:  Stan Rokita <stan@stansa.dev>
 # Date: 2023-06-13
 # Copyright: Unlicensed
 ##
