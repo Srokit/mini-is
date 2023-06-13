@@ -22,4 +22,6 @@ typedef struct {
   mis_ins_op_t op_;
 } mis_ins_t;
 
+mis_ins_t mis_ins_from_str(const char* str);
+
 #endif  // MINI_IS_INSTRUCTION_H

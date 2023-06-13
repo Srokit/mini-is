@@ -16,7 +16,7 @@
 #ifndef MINI_IS_SYSTEM_H
 #define MINI_IS_SYSTEM_H
 
-typedef struct {
+typedef struct mis_system_struct {
   mis_memory_t* memory_;
 } mis_system_t;
 
