@@ -19,7 +19,7 @@ typedef enum {
 
 // Will be expanded later
 typedef struct {
-  mis_ins_op_t op;
+  mis_ins_op_t op_;
 } mis_ins_t;
 
 #endif  // MINI_IS_INSTRUCTION_H

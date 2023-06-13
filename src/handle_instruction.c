@@ -8,8 +8,8 @@
 
 #include "mini-is/handle_instruction.h"
 
-void mis_handle_instruction(mis_ins_t* ins) {
-  switch (ins->op) {
+void mis_handle_instruction(mis_system_t* sys, mis_ins_t* ins) {
+  switch (ins->op_) {
     case MIS_INS_OP_NOP:
       // Do nothing
       break;

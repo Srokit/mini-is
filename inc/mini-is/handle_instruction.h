@@ -14,12 +14,13 @@
 #define MINI_IS_HANDLE_INSTRUCTION_H
 
 #include "mini-is/instruction.h"
+#include "mini-is/system.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-void mis_handle_instruction(mis_ins_t*);
+void mis_handle_instruction(mis_system_t*, mis_ins_t*);
 
 #ifdef __cplusplus
 }

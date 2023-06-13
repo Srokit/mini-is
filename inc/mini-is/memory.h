@@ -20,7 +20,7 @@
 typedef unsigned char mis_byte_t;
 
 typedef struct {
-  mis_byte_t* bytes;
+  mis_byte_t* bytes_;
 } mis_memory_t;
 
 #ifdef __cplusplus
