@@ -6,10 +6,6 @@
  * Copyright: Unlicensed
  */
 
-/**
- * Code that handles instructions.
- */
-
 #ifndef MINI_IS_HANDLE_INSTRUCTION_H
 #define MINI_IS_HANDLE_INSTRUCTION_H
 
@@ -20,7 +16,12 @@
 extern "C" {
 #endif
 
-void mis_handle_instruction(mis_system_t*, mis_ins_t*);
+/**
+ * Handle an instruction. Will perform the necessary changes to `system`
+ * according to the operation type of `instruction`.
+ */
+void mis_handle_instruction(
+    mis_system_t* /* system */, mis_ins_t* /* instruction */);
 
 #ifdef __cplusplus
 }

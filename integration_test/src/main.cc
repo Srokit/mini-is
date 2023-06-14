@@ -18,7 +18,7 @@ class IntegrationTest : public ::testing::Test {
   }
 
   void TearDown() override {
-    miniis_destroy(handle_);
+    miniis_deinit(handle_);
   }
   miniis_handle_t* handle_;
 };
