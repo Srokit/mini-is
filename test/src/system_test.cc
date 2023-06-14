@@ -25,3 +25,9 @@ class SystemTest : public ::testing::Test {
 TEST_F(SystemTest, SystemInit) {
   EXPECT_NE(system_, nullptr);
 }
+
+TEST_F(SystemTest, AllRegsStartAsZero) {
+  for (int i = 0; i < MIS_NUM_REGISTERS; i++) {
+    EXPECT_EQ(mis_system_read_register(system_, i), 0x00);
+  }
+}

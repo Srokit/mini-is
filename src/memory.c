@@ -38,3 +38,12 @@ void mis_memory_read(mis_memory_t* memory,
          memory->bytes_ + read_start_address,
          size);
 }
+
+void mis_memory_write(mis_memory_t* memory,
+                      int write_start_address,
+                      int size,
+                      const char* src_buffer) {
+  memcpy(memory->bytes_ + write_start_address,
+         src_buffer,
+         size);
+}

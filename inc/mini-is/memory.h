@@ -35,6 +35,11 @@ void mis_memory_read(mis_memory_t*,
                      int /* size */,
                      char* /* dst_buffer */);
 
+void mis_memory_write(mis_memory_t*,
+                      int /* write_start_address */,
+                      int /* size */,
+                      const char* /* src_buffer */);
+
 #ifdef __cplusplus
 }  // extern "C"
 #endif

@@ -35,6 +35,10 @@ void miniis_read_memory(miniis_handle_t* handle,
                          dst_buffer);
 }
 
+int miniis_read_register(miniis_handle_t* handle, int reg_num) {
+  return (int) mis_system_read_register(handle->sys_, reg_num);
+}
+
 void miniis_destroy(miniis_handle_t* handle) {
   mis_system_destroy(handle->sys_);
   free(handle);
