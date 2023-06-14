@@ -1,0 +1,15 @@
+See integration_test/src/main.cc for example instruction string being used.
+
+The available instructions are:
+
+----- NOP
+No operation
+
+----- LOAD <register_index> <memory_offset>
+Load an int (4 byte) value from `memory_offset` ints into memory
+into register with index `register_index`.
+Note that the `memory_offset` will be multiplied by 4 to get the actual byte offset.
+
+----- STORECONST <memory_offset> <const_int_val>
+Store a constant int value into memory.
+The byte offset into memory will be calculated the same was as LOAD command
